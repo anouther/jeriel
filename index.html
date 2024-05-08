@@ -1,0 +1,70 @@
+<html>
+<meta charset='UTF-8'/>
+<meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js">
+</script>
+  <link href="style.css" rel="stylesheet" type="text/css" /><script src="script.js"></script>
+<body>
+<style>body{background-image: url("bg.jpg");background-repeat: no-repeat;background-size: 100% 100%;font-family: 'Balsamiq Sans', cursive; animation:none;transition:all .3s ease;}</style>
+
+<div id="konten"><div id="foto"><div class="image"><img id="photo" src="download.gif" width="200px" height="200px"/></div><span id="sp2"></span></div>
+
+<div id='slider'>
+  <p>hai, &nbsp;<b id="kamu"></b> kuuu!</p>
+  <p>oioiii picirrr! it's 5 months today since we've been together.</p>
+  <p>thank you for being mine after all the times we had, you're a wonderful person and i'm always grateful for you.</p>
+  <p>thank you always on my side, always being my best supporter, and you complement my life.</p>
+  <p>i hope we can always be together.</p>
+  <p>i'm happy with you, so please stay with me and love each other more.</p>
+  <p> thank you for being the reason i smile.</p>
+  <p> i'm so lucky to be yours, i don't know who can handle me like you do. you touched the place in my heart where love runs wild and you showed me that i was worth to loving.
+</p>
+  <p>do you wanna know why i like you? actually i don't have an answer for that.</p>
+  <p>but i guess it's just the vibes you give me, the smiles you put on my face, the laughs i get from talking to you, and just the fact you are the reason i am happy each and every day.</p>
+  <p>Pencet LOVE ini<label class='lovein' onClick="duar()">&#128158;</label></p>
+</div><div id="contTom"><a class='button whatsapp' onClick='bukaWa();'><i class='icon whatsapp'></i>Kirim</a></div>
+</div>
+<div id="bodyblur"></div>
+
+<script>  
+var a=0,finish;
+finish = "happy 5th mensiversary iyelkuuu!💗 iyelll, terimakasih banyak yaa udah mau bertahan sama aku sejauh ini, kuat ngadepin aku yg kadang nyebelin dan bikin kamu kebawa emosi, maaf yaa kalo aku banyak kurangnya dan masih jauh dari apa yg kamu harapkan. semoga kita masih bisa ketemu sama tanggal 15 lagi yaa!^^ aku bener bener beruntung punya kamu disini, maaf kalo belum bisa jadi yg terbaik buat kamu ya, tapi aku bakal selalu berusaha terus buat jadi yg lebih baik untuk kamu kedepannya. thank you for being here, with me ofc. i hope that in our mensive this time in the future relationship will be much better, i really love you, always. it's nice to be able to be together until now, we can solve all problems together, okay? aku harap kamu gapernah capek yaa buat perbaikin apapun yg terjadi nantinya. since i met you, my life has been happier than it was before. you bring colors into it. i knew from the start, the first time i met you, that you're special. you are so precious to me. you're the safest, most comfortable, and the best place for me. thank you for always makinh me smile and keeping me happy. thank you for everything, let's continue to be happy together. i love you very much, i wish i could sat that to you many times. you make me feel loves, special, and give me butterflies. i love you 360° mas sayanggg💗";
+
+function play() {
+  var audio = new Audio('You & I .mp3');
+  audio.play();
+}
+            
+ function bukaWa(){window.location = "https://t.me/aiueozeb"}
+</script>
+ 
+<script type="text/javascript">            
+            var today = new Date();var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear()+'.';var dateTime = date;
+            const swals = Swal.mixin({
+                allowOutsideClick: false,
+            });
+            async function mulai(){
+                var { value: nama } = await swals.fire({
+                    title: 'Masukin nama kamu!',
+                    input: 'text',
+                    confirmButtonText: 'next',
+                    showCancelButton: false,
+                });                           
+                if(nama){
+                	window.nama = nama;
+                    finish = finish + ", " + nama + "!";    
+                    document.getElementById("kamu").innerHTML = "" + window.nama;
+                    setTimeout(showDiv, 700);play();                      
+                } else {
+                    await swals.fire('Heh! Jangan dikosongin atuh namanya buru isi 😡');
+                    mulai();
+                }
+            }
+            mulai();
+</script>
+</body>
+</html>
